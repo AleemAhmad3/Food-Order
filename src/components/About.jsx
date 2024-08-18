@@ -1,10 +1,28 @@
 import React from "react";
+import { useNavigate, useLocation } from "react-router-dom"; // Import useLocation
+import { FaArrowLeft } from "react-icons/fa"; // Import FontAwesome arrow icon
 import img from "../assets/img/about.png";
 import Button from "../layouts/Button";
 
 const About = () => {
+  const navigate = useNavigate();
+  const location = useLocation(); // Get current route
+
+  // Determine if the back arrow should be shown
+  const showBackArrow = location.pathname !== "/";
+
   return (
-    <div className="min-h-screen flex flex-col lg:flex-row justify-center items-center lg:px-32 px-5 mb-16">
+    <div className="min-h-screen flex flex-col lg:flex-row justify-center items-center lg:px-32 px-5 mb-16 relative">
+      {/* Back Arrow Icon */}
+      {showBackArrow && (
+        <button
+          onClick={() => navigate("/")}
+          className="absolute top-4 left-4 text-3xl text-gray-700 hover:text-brightColor"
+        >
+          <FaArrowLeft />
+        </button>
+      )}
+
       <img src={img} alt="About Us" className="w-full lg:w-1/2 mb-6 lg:mb-0" />
 
       <div className="space-y-4 lg:ml-6">

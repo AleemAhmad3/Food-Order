@@ -5,7 +5,9 @@ import Menu from "./components/Menu";
 import About from "./components/About";
 import ContactUs from "./components/ContactUs";
 import Signup from "./components/Signup";
-import SignIn from "./components/SignIn"; // Import the SignIn component
+import SignIn from "./components/SignIn"; 
+import Review from "./components/Review";
+
 
 const App = () => {
   return (
@@ -16,7 +18,10 @@ const App = () => {
         <Route path="/about" element={<About />} />
         <Route path="/contact-us" element={<ContactUs />} />
         <Route path="/signup" element={<Signup />} />
-        <Route path="/signin" element={<SignIn />} /> {/* Add route for sign-in page */}
+        <Route path="/signin" element={<SignIn />} /> 
+        <Route path="/review" element={<Review />} /> 
+        
+
       </Routes>
     </div>
   );

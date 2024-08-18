@@ -5,8 +5,7 @@ import ExploreMenu from "./ExploreMenu";
 import About from "./About";
 import Footer from "./Footer";
 import Review from "./Review";
-import Signup from "./Signup";
-import SignIn from "./SignIn";
+import TopDishes from "./TopDishes";
 
 const Home = () => {
   return (
@@ -14,6 +13,7 @@ const Home = () => {
       <Navbar />
       <Hero />
       <ExploreMenu />
+      <TopDishes />
       <About />
       <Review />
       <Footer />

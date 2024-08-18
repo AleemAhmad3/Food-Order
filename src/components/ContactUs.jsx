@@ -1,11 +1,23 @@
 import React from 'react';
+import { FaArrowLeft } from "react-icons/fa"; // Import FontAwesome arrow icon
+import { useNavigate } from "react-router-dom"; // Import useNavigate
 
 const ContactUs = () => {
+  const navigate = useNavigate(); // Initialize navigate function
+
   return (
-    <div className="min-h-screen flex flex-col items-center justify-center bg-white py-12 px-5">
+    <div className="min-h-screen flex flex-col items-center justify-center bg-white py-12 px-5 relative">
+      {/* Back Arrow Icon */}
+      <button
+        onClick={() => navigate("/")}
+        className="absolute top-4 left-4 text-3xl text-gray-700 hover:text-brightColor"
+      >
+        <FaArrowLeft />
+      </button>
+
       <div className="w-full max-w-4xl bg-gray-100 shadow-lg rounded-lg p-8">
         <h1 className="text-4xl font-semibold text-center mb-6">Contact Us</h1>
-        
+
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
           <div className="flex flex-col">
             <h2 className="text-2xl font-semibold mb-4">Get in Touch</h2>
@@ -58,8 +70,8 @@ const ContactUs = () => {
               <span className="font-semibold">Email:</span> contact@yourcompany.com
             </p>
             <div className="mt-6">
-              <h3 className="text-xl font-semibold mb-2">Follow Us</h3>
-              <div className="flex gap-4 text-2xl">
+              <h3 className="text-lg font-semibold mb-2">Follow Us</h3>
+              <div className="flex gap-4 text-lg">
                 <a 
                   className="text-blue-600 hover:text-blue-800 transition-colors" 
                   href="https://www.facebook.com/your-profile" 
