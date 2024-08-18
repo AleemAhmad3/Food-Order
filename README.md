@@ -1,5 +1,18 @@
 # Food-Order
 Food Ordering Website
+A food ordering website built with React and TailwindCSS. This project allows users to explore a menu of dishes and interact with various pages of the website, including a Contact Us page and user authentication pages.
+Features
+Home Page: Features a hero section with an "Order Now" button.
+Menu Page: Displays a list of dishes with options to view details.
+Contact Us Page: Provides a form for users to contact the support team.
+Login Page: Allows users to log in to their account.
+Signup Page: Provides a form for users to create a new account.
+Responsive Design: Fully responsive with a hamburger menu for mobile devices.
+Technologies
+React: Frontend library for building the user interface.
+TailwindCSS: Utility-first CSS framework for styling.
+React Router: For client-side routing.
+React Icons: For icons used in the UI.
 # React + Vite
 
 This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
