@@ -44,9 +44,10 @@ const Navbar = () => {
 
         {/* Cart and SignIn Button */}
         <div className="hidden lg:flex items-center gap-6">
-          <NavLink to="/">
+          <NavLink to="/cart">
             <BsHandbag className="text-3xl" />
           </NavLink>
+
           <Button title="SignIn" onClick={() => navigate("/signin")} />
         </div>
 

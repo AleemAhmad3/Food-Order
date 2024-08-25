@@ -1,8 +1,8 @@
 import React from "react";
-import { useNavigate } from "react-router-dom"; // Import useNavigate
-import { FaArrowLeft } from "react-icons/fa"; // Import FontAwesome arrow icon
+import { useNavigate } from "react-router-dom";
+import { FaArrowLeft } from "react-icons/fa";
 import { food_list } from "../assets/assets";
-import DishesCard from "../layouts/DishesCard";
+import DishesCard from "../layouts/DishesCard"; // Import DishesCard component
 
 // Utility function to chunk array into rows
 const chunkArray = (array, size) => {
@@ -55,10 +55,11 @@ const Menu = () => {
             {row.map((dish) => (
               <DishesCard
                 key={dish._id}
+                id={dish._id} // Ensure each dish has a unique identifier
                 img={dish.image}
                 title={dish.name}
                 description={dish.description}
-                price={`${dish.price}`}
+                price={dish.price} // Remove template literal if price is a number
               />
             ))}
           </div>

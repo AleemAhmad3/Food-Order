@@ -1,9 +1,11 @@
 import React, { useState } from "react";
 import { menu_list, food_list } from "../assets/assets";
-import { FaPlus } from "react-icons/fa"; // Import FontAwesome plus icon
+import DishesCard from "../layouts/DishesCard"; // Import the DishesCard component
+import useCartStore from "../store/CartStore"; // Correct import path for Zustand store
 
 const ExploreMenu = () => {
   const [selectedCategory, setSelectedCategory] = useState(menu_list[0].menu_name);
+  const addToCart = useCartStore((state) => state.addToCart);
 
   // Filter dishes based on the selected category
   const filteredDishes = food_list.filter((food) => food.category === selectedCategory);
@@ -15,7 +17,7 @@ const ExploreMenu = () => {
         {menu_list.map((item, index) => (
           <div
             key={index}
-            className={`w-32 h-32 flex flex-col items-center cursor-pointer relative ${
+            className={`w-28 h-28 mb-5 flex flex-col items-center cursor-pointer relative ${
               selectedCategory === item.menu_name
                 ? "border-4 border-brightColor rounded-full p-1"
                 : ""
@@ -31,24 +33,19 @@ const ExploreMenu = () => {
           </div>
         ))}
       </div>
-      
+
       {/* Display related dishes */}
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-        {filteredDishes.map((dish, index) => (
-          <div key={index} className="bg-white rounded-lg shadow-lg p-4 relative">
-            <img
-              src={dish.image}
-              alt={dish.name}
-              className="w-full h-32 object-cover mb-4 rounded-lg"
-            />
-            <h3 className="text-lg font-semibold mb-2">{dish.name}</h3>
-            <p className="text-gray-600">{dish.description}</p>
-            <p className="mt-2 font-bold text-brightColor">${dish.price}</p>
-            {/* Add the "+" icon */}
-            <div className="absolute bottom-2 right-2 bg-brightColor text-white p-2 rounded-full">
-              <FaPlus />
-            </div>
-          </div>
+        {filteredDishes.map((dish) => (
+          <DishesCard
+            key={dish._id}
+            id={dish._id}
+            img={dish.image}
+            title={dish.name}
+            description={dish.description}
+            price={dish.price}
+            onAddToCart={() => addToCart(dish)} // Pass the addToCart function to DishesCard
+          />
         ))}
       </div>
     </div>
