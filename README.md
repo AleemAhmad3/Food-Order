@@ -59,15 +59,19 @@ This project uses Vite for fast development and build processes. Two official pl
 ## Installation
 
 ### Clone the Repository:
+
 https://github.com/AleemAhmad3/Food-Order.git
 
 ### Navigate to the Project Directory:
+
 Run cd food-order in your terminal.
 
 ### Install Dependencies:
+
 Execute npm install to install the necessary packages.
 
 ### Run the Development Server:
+
 Start the server with npm Start.
 Open in Browser.
 
