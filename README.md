@@ -56,6 +56,21 @@ This project uses Vite for fast development and build processes. Two official pl
 - **[@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md)**: Uses Babel for Fast Refresh.
 - **[@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc)**: Uses SWC for Fast Refresh.
 
+## Installation
+
+### Clone the Repository:
+https://github.com/AleemAhmad3/Food-Order.git
+
+### Navigate to the Project Directory:
+Run cd food-order in your terminal.
+
+### Install Dependencies:
+Execute npm install to install the necessary packages.
+
+### Run the Development Server:
+Start the server with npm Start.
+Open in Browser.
+
 
 
 ## Screenshots
