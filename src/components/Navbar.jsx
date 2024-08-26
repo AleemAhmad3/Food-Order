@@ -53,7 +53,7 @@ const Navbar = () => {
 
         {/* Mobile Menu Icon */}
         <div className="lg:hidden flex items-center gap-4">
-          <NavLink to="/">
+          <NavLink to="/cart">
             <BsHandbag className="text-3xl" />
           </NavLink>
           <button onClick={toggleMenu} className="text-3xl">
